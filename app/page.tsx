@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   ArrowUpRight,
   Compass,
@@ -299,8 +300,37 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Studio */}
+        <section id="work">
+          <Reveal>
+            <div className="relative aspect-[4/5] w-full overflow-hidden border-y border-line/60 sm:aspect-[16/10] lg:aspect-[21/9]">
+              <Image
+                src="/images/meridian-hero.png"
+                alt="A gold wireframe globe sculpture mounted on a curved travertine column in Meridian's studio, lit by golden-hour light with a city skyline beyond"
+                fill
+                sizes="100vw"
+                className="object-cover"
+                style={{ objectPosition: "28% 42%" }}
+                loading="lazy"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/10 to-transparent sm:from-ink/70"
+              />
+              <div className="absolute inset-x-0 bottom-0 px-6 pb-8 sm:bottom-10 sm:left-10 sm:right-auto sm:px-0 sm:pb-0">
+                <p className="font-mono text-xs uppercase tracking-[0.25em] text-gold">
+                  Studio
+                </p>
+                <p className="mt-3 max-w-xs font-display text-2xl italic leading-snug text-paper sm:text-3xl">
+                  Where ideas take shape.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </section>
+
         {/* Testimonial */}
-        <section id="work" className="mx-auto max-w-6xl px-6 py-28 sm:py-36">
+        <section className="mx-auto max-w-6xl px-6 py-28 sm:py-36">
           <Reveal className="mx-auto max-w-2xl text-center">
             <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-full border border-line">
               <Quote className="h-4 w-4 text-gold" strokeWidth={1.5} />
